@@ -1,0 +1,31 @@
+import java.util.*;
+
+class Employee {
+    int id;
+    String name;
+    double salary;
+
+    Employee(int id, String name, double salary) {
+        this.id = id;
+        this.name = name;
+        this.salary = salary;
+    }
+
+    void display() {
+        System.out.println(id + " " + name + " " + salary);
+    }
+}
+
+public class EmployeeManagement {
+    public static void main(String[] args) {
+        List<Employee> employees = new ArrayList<>();
+
+        employees.add(new Employee(101, "Sai", 60000));
+        employees.add(new Employee(102, "Ganesh", 75000));
+        employees.add(new Employee(103, "Rahul", 55000));
+
+        for (Employee e : employees) {
+            e.display();
+        }
+    }
+}
