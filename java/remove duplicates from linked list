@@ -1,0 +1,23 @@
+class Node {
+    int data;
+    Node next;
+
+    Node(int data) {
+        this.data = data;
+    }
+}
+
+public class RemoveDuplicates {
+    static Node head;
+
+    static void remove() {
+        Node curr = head;
+
+        while (curr != null && curr.next != null) {
+            if (curr.data == curr.next.data)
+                curr.next = curr.next.next;
+            else
+                curr = curr.next;
+        }
+    }
+}
